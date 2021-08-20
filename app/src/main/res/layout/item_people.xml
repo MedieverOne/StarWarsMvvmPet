@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="people"
+            type="com.medieverone.domain.entities.PeopleEntity" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="5dp"
+        android:layout_marginHorizontal="6dp">
+
+        <TextView
+            android:id="@+id/tvPeopleName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="@{people.name}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Luke Skywalker"
+            />
+
+        <TextView
+            android:id="@+id/tvHeightTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Persona's height:"
+            app:layout_constraintTop_toBottomOf="@id/tvPeopleName"
+            app:layout_constraintStart_toStartOf="@id/tvPeopleName"
+            app:layout_constraintEnd_toStartOf="@id/tvHeight" />
+
+        <TextView
+            android:id="@+id/tvHeight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/tvHeightTitle"
+            app:layout_constraintEnd_toEndOf="@id/tvPeopleName"
+            app:layout_constraintTop_toTopOf="@id/tvHeightTitle"
+            tools:text="172 cm"
+            android:text="@{people.height}"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
