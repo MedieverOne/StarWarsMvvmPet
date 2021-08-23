@@ -15,5 +15,8 @@ data class BaseListModel<ItemType> (
     val previousUrl: String?,
     @SerializedName("results")
     @Expose
-    val results: List<ItemType>
+    val results: List<ItemType>,
+    @SerializedName("detail")
+    @Expose
+    val detail: String? = null
     )

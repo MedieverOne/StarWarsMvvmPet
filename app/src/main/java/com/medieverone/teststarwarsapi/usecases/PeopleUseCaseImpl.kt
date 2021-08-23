@@ -9,7 +9,7 @@ class PeopleUseCaseImpl(
 
     override suspend fun getPeoples() = peopleRepository.getPeoples()
 
-    override suspend fun getPeoplesPage(page: Int) = peopleRepository.getPeoplesPage(page)
+    override suspend fun getPeoplesPage(pageSize: Int, pageIndex: Int) = peopleRepository.getPeoplesPage(pageSize, pageIndex)
 
     override suspend fun getPeople(id: Int) = peopleRepository.getPeople(id)
 

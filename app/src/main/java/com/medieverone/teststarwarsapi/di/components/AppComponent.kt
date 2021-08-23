@@ -18,7 +18,8 @@ import javax.inject.Singleton
         RepositoryModule::class,
         ViewModelFactoryModule::class,
         DataSourceModule::class,
-        CoroutineModule::class
+        CoroutineModule::class,
+        RoomModule::class
     ]
 )
 @Singleton

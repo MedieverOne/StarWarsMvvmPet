@@ -22,7 +22,7 @@ class PeoplesViewModel @Inject constructor(
 
     init {
         val config = PagedList.Config.Builder()
-            .setPageSize(10)
+            .setPageSize(PEOPLES_PAGE_SIZE)
             .setEnablePlaceholders(false)
             .build()
         peoplesLiveData = initializedPagedListBuilder(config).build()
@@ -38,5 +38,10 @@ class PeoplesViewModel @Inject constructor(
             }
         }
         return LivePagedListBuilder(dataSourceFactory, config)
+    }
+
+    companion object {
+
+        const val PEOPLES_PAGE_SIZE = 10
     }
 }

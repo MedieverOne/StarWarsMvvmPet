@@ -87,4 +87,8 @@ dependencies {
 
     // PagingLibrary https://developer.android.com/topic/libraries/architecture/paging
     implementation "androidx.paging:paging-runtime:$pagingVersion"
+
+    // Room
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
 }

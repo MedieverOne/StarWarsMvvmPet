@@ -1,5 +1,6 @@
 package com.medieverone.teststarwarsapi.di.modules
 
+import com.medieverone.data.interactors.local.PeopleLocalInteractor
 import com.medieverone.data.interactors.network.PeopleNetworkInteractor
 import com.medieverone.data.repositories.PeopleRepository
 import dagger.Module
@@ -11,7 +12,10 @@ import dagger.Provides
 class RepositoryModule {
 
     @Provides
-    fun providePeopleRepository(peopleNetworkInteractor: PeopleNetworkInteractor): PeopleRepository {
-        return PeopleRepository(peopleNetworkInteractor)
+    fun providePeopleRepository(
+        peopleNetworkInteractor: PeopleNetworkInteractor,
+        peopleLocalInteractor: PeopleLocalInteractor
+    ): PeopleRepository {
+        return PeopleRepository(peopleNetworkInteractor, peopleLocalInteractor)
     }
 }
