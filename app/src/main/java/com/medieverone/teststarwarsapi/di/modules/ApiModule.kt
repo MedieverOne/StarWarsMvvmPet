@@ -1,5 +1,6 @@
 package com.medieverone.teststarwarsapi.di.modules
 
+import com.medieverone.data.api.ImagesApi
 import com.medieverone.data.api.PeopleApi
 import dagger.Module
 import dagger.Provides
@@ -13,5 +14,9 @@ class ApiModule {
 
     @Provides
     @Singleton
-    fun providePeopleApi(retrofit: Retrofit): PeopleApi = retrofit.create(PeopleApi::class.java)
+    fun providePeopleApi(@StarWarsRetrofitApi retrofit: Retrofit): PeopleApi = retrofit.create(PeopleApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideImagesApi(@ImageRetrofitApi retrofit: Retrofit): ImagesApi = retrofit.create(ImagesApi::class.java)
 }
