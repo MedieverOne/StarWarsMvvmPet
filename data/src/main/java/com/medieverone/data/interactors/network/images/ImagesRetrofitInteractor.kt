@@ -1,6 +1,7 @@
-package com.medieverone.data.interactors.network
+package com.medieverone.data.interactors.network.images
 
 import com.medieverone.data.api.ImagesApi
+import com.medieverone.data.interactors.network.ImagesNetworkInteractor
 
 class ImagesRetrofitInteractor(
     val imagesApi: ImagesApi

@@ -1,7 +1,6 @@
 package com.medieverone.teststarwarsapi.di.components
 
 import com.medieverone.teststarwarsapi.di.modules.*
-import com.medieverone.teststarwarsapi.ui.fragments.PeoplesFragment
 import dagger.Component
 import dagger.internal.Preconditions
 import kotlinx.coroutines.DelicateCoroutinesApi
@@ -10,7 +9,6 @@ import javax.inject.Singleton
 @Component(
     modules = [
         ContextModule::class,
-        AppModule::class,
         UseCaseModule::class,
         InteractorModule::class,
         RetrofitModule::class,

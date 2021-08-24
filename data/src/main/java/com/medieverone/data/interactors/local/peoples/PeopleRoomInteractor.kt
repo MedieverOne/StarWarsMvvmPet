@@ -1,7 +1,8 @@
-package com.medieverone.data.interactors.local
+package com.medieverone.data.interactors.local.peoples
 
 import com.medieverone.data.database.StarWarsDatabase
 import com.medieverone.data.entities.local.PeopleRoomDataEntity
+import com.medieverone.data.interactors.local.PeopleLocalInteractor
 import com.medieverone.domain.entities.PeopleEntity
 
 class PeopleRoomInteractor(

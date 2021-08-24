@@ -1,6 +1,7 @@
-package com.medieverone.data.interactors.network
+package com.medieverone.data.interactors.network.peoples
 
 import com.medieverone.data.api.PeopleApi
+import com.medieverone.data.interactors.network.PeopleNetworkInteractor
 
 class PeopleRetrofitInteractor(
     private val peopleApi: PeopleApi

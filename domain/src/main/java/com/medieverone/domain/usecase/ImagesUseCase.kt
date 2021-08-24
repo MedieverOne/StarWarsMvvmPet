@@ -10,4 +10,8 @@ interface ImagesUseCase {
         pageSize: Int = 10,
         autoCorrect: Boolean = true
     ): List<ImageEntity>
+
+    suspend fun getImageByPersonName(
+        name: String
+    ): ImageEntity?
 }
